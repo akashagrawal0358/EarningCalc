@@ -1,0 +1,88 @@
+.navbar {
+  background-color: black;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 16px 144px 16px 144px;
+}
+
+.nav-anchor {
+  width: 196px;
+  height: 35px;
+}
+.nav-box {
+  width: Hug (216px);
+  height: 44px;
+  gap: 20px;
+}
+
+/* Style the main content area */
+.landing-box {
+  position: absolute;
+  display: flex;
+  top: 134px;
+  left: 348px;
+  width: 713px;
+  height: 348px;
+  flex-direction: column;
+  gap: 24px;
+  color: white;
+  text-align: center;
+}
+
+.content {
+  width: 713px;
+  height: 348px;
+}
+
+/* LandingPage.css */
+.p1 {
+  font-size: 60px;
+  font-weight: 600;
+  padding-bottom: 1rem;
+}
+
+.p2 {
+  color: rgb(130, 125, 125);
+  font-size: 20px;
+  padding-bottom: 1rem;
+}
+
+/* Style the icon and input container */
+
+.search-container {
+  display: flex;
+  gap: 24px;
+  width: 713px;
+  height: 48px;
+}
+
+.icon {
+  font-size: 20px; /* Adjust the size as needed */
+  color: #555; /* Icon color */
+  margin-right: 10px; /* Margin between icon and input */
+}
+
+/* Style the search input box */
+.search-box {
+  width: 713px;
+  height: 48px;
+  border: 1px solid #ddd; 
+  color: white;
+  padding-left: 20px;
+  background-color: black;
+  border-radius: 25px;
+}
+
+/* Style the search button */
+.check-button {
+  width: 165px;
+  font-size: 14px;
+  padding: 16px;
+  color: white; /* Button text color */
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: rgb(243, 58, 58);
+  border-radius: 25px;
+}
