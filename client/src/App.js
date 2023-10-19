@@ -1,5 +1,6 @@
 
 import './App.css';
+import NavSearchBar from './components/NavSearchBar';
 import Navbar from './components/Navbar';
 import EarningPage from './pages/EarningPage';
 import LandingPage from './pages/LandingPage';
@@ -9,10 +10,10 @@ function App() {
   return (
     <>
       <Router>
-        <Navbar/>
+        {/* <Navbar/> */}
         <Routes>
           <Route path='/' element={<LandingPage/>} />
-          <Route path='/earningpage' element={<EarningPage />} />
+          <Route path='/earningpage' element={<EarningPage />} component={() => <div><NavSearchBar /> </div>} />
         </Routes>
       </Router>
     </>

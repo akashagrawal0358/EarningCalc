@@ -9,12 +9,38 @@
 .nav-anchor {
   width: 196px;
   height: 35px;
+  display: flex;
+  align-items: center;
+  font-size: 28px;
+  font-weight: 600;
 }
 .nav-box {
   width: Hug (216px);
   height: 44px;
   gap: 20px;
+  color: white;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  border-radius: 40px;
+  border: 1px solid white;
+  padding: 0px 20px;
+
 }
+.nav-box button {
+   background-color: transparent;
+   border: none;
+   outline: none;
+   color: white;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   gap: 3px;
+   font-size: 20px;
+   font-weight: 400;
+}
+
+
 
 /* Style the main content area */
 .landing-box {

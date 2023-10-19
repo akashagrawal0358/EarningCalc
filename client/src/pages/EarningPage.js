@@ -3,10 +3,12 @@ import React from 'react'
 import '../styles/earning.css'
 import EarningOne from '../components/EarningOne'
 import EarningTwo from '../components/EarningTwo'
+import Navbar from '../components/Navbar'
 
 const EarningPage = () => {
     return (
         <>
+            <Navbar/>
             <EarningOne/>
             <EarningTwo/>
         </>

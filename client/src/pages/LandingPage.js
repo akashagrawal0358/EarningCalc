@@ -2,10 +2,12 @@ import React from 'react';
 import '../styles/landing.css';
 import { NavLink } from 'react-router-dom';
 import { AiFillPlayCircle } from 'react-icons/ai'
+import Navbar from '../components/Navbar';
 
 const LandingPage = () => {
     return (
-        <>
+        <>  
+            <Navbar/>
             <div className='bigContainer'>
 
                 <div className='container'>
