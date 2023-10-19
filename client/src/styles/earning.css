@@ -2,35 +2,49 @@
 
 /* Define styles for the row and columns */
 
-.container-EarnOne{
-  width: 1367px; 
+.bigContainer{
+  height: 100vh;
+  width: 100%;
+}
+
+.mediaPlayer{
+  width: 300px;
+  height: 300px;
+  top: 528px;
+  left: 1107px;
+  border-radius: 100000px;
+  background: rgba(255, 255, 255, 0.06); 
+}
+
+
+.container-EarnOne {
+  width: 1367px;
   height: 359px;
   top: 76px;
   left: -1px;
   display: flex;
   justify-content: center;
   align-items: center;
-}
 
+  margin: 0 auto;
+}
 
 .e-row {
-    
-    background-color: #1E1E1E;
-    border-radius: 16px;
-    width: 1079px;
-    height: 266px;
-    top: 46px;
-    left: 145px ;
-    padding: 20px 40px 20px 40px ;
-    gap: 20px
+  background-color: #1e1e1e;
+  border-radius: 16px;
+  width: 1079px;
+  height: 266px;
+  top: 46px;
+  left: 145px;
+  padding: 20px 40px 20px 40px;
+  gap: 20px;
 }
-.e-row-inside{
+.e-row-inside {
   display: flex;
   width: 955px;
   height: 226px;
   gap: 40px;
-  padding: 20px 40px 20px 40px ;
-
+  padding: 20px 40px 20px 40px;
 }
 
 /* Style for the image in the first column */
@@ -38,61 +52,92 @@
   max-width: 100%;
   height: auto;
 }
-.Maincolumn1{
+.Maincolumn1 {
   color: white;
   display: flex;
   flex-direction: row;
   width: 529px;
   height: 226px;
-  gap: 11px;
+  gap: 20px;
 }
 
-.column1{
-  width: 240px;
-  height: 135px;
-  border-radius: 10px;
-}
-.column2{
-  
-  width: 255px;
-  height: 157px;
+.column1 {
+  width: 254px;
+  height: 226px;
+  gap: 20px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  gap: 11px;
-  
-}
-.column2 p{
-   font-weight: 500;
-}
-.row3{
-  color: rgb(130, 125, 125);
-  font-size: 20px;
-
-  display: flex;
-  flex-direction: column;
-  width: 93px;
-  height: 96px;
-  gap: 12px;
+  align-items: flex-start;
 }
 
 
-.topEarning{
+.topEarning {
   width: 172px;
   height: 32px;
   border-radius: 4px;
   padding: 4px 8px 4px 8px;
   background-color: #707070;
   gap: 4px;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
- .earn-img{
+.earn-img {
   width: 240px;
   height: 135px;
-  border-radius: 10px
+  border-radius: 10px;
+}
+
+.upload{
+  width: 227px;
+  height: 19px;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 19.36px ;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.column2 {
+  width: 255px;
+  height: 157px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11px;
+  padding: 20px;
+}
+.column2 p {
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 24.2px;
+  width: 255px;
+  height: 50px;
+}
+.row3 {
+  color: #ffffff;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 93px;
+  height: 96px;
+  gap: 12px;
+  padding-top: 8px;
+}
+.row3 span {
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 20px;
   
- } 
-.Maincolumn2{
+}
+
+.spanNumber {
+  color: rgb(130, 125, 125);
+}
+
+
+
+.Maincolumn2 {
   color: white;
   display: flex;
   flex-direction: row;
@@ -103,5 +148,97 @@
   border-radius: 16px;
   align-items: center;
   justify-content: center;
-  
+}
+
+.Maincol2-inner{
+  display: flex;
+  width: 346px;
+  height: 120px;
+  gap: 24px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.Maincol2-inner span{
+  width: 173px;
+  height: 48px;
+  display :flex;
+  align-items: center;
+  gap:4px;
+  font-size: 40px;
+  line-height: 48.4px;
+  font-weight: 700;
+
+}
+.Maincol2-inner button{
+  width: 143px;
+  height: 48px;
+  font-size: 16px;
+  border-radius: 35px;
+  padding: 18px 24px 18px 24px ;
+  gap: 10px;
+  font-weight: 400;
+}
+
+
+
+
+
+
+
+
+
+/* ---------------------------  Earning Two section---------------------------- */
+
+.Earn-heading {
+  display: block;
+  width: 227px;
+  height: 28px;
+  left: 544px;
+
+  margin: 0 auto;
+  font-size: 20px;
+  font-weight: 500;
+  line-height: 28px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.container-EarnTwo {
+  width: 1170px;
+  height: 81px;
+  top: 503px;
+  left: 144px;
+  border-radius: 16px;
+  gap: 60px;
+  top: 76px;
+  color: white;
+  margin: 20px auto;
+}
+
+.row-header {
+  display: grid;
+  grid-template-columns: 1fr 2.5fr 2.5fr 2fr 2fr 2fr 2fr 2fr;
+  background-color: #1e1e1e;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 20px;
+  padding: 20px 40px 20px 40px;
+}
+.column-Table {
+  text-align: center;
+}
+
+.row-all {
+  font-weight: 400;
+  font-size: 16px;
+  background: rgba(30, 30, 30, 0.5);
+}
+
+.row-img {
+  width: 120px;
+  height: 67.5px;
+  top: 11px;
+  left: 282px;
+  border-radius: 10px;
 }

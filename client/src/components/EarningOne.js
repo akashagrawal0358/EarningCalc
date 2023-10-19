@@ -1,8 +1,16 @@
 import React from 'react'
+import {AiFillEye } from 'react-icons/ai'
+import { RiThumbUpFill} from 'react-icons/ri'
+import { FaCommentAlt} from 'react-icons/fa'
+import { FaIndianRupeeSign } from 'react-icons/fa6'
+
+import { RiAwardFill} from 'react-icons/ri'
 
 const EarningOne = () => {
     return (
 
+       <div className='container'>
+        
         <div className='container-EarnOne'>
 
             <div className="e-row">
@@ -10,33 +18,38 @@ const EarningOne = () => {
                     <div className="Maincolumn1">
                         <div className='column1'>
 
-                                <span className='topEarning'>Top Earning videos</span>
+                                <span className='topEarning'><RiAwardFill/> Top Earning videos</span>
                             <figure>
                                 <img className='earn-img' src="../images/earningimg.jpg" alt='k' />
-                                <figcaption> Uploaded on - date-------</figcaption>
                             </figure>
+                                <span className='upload'> Uploaded on - June 23, 2023</span>
         
                         </div>
                         <div className="column2">
                             <p>How become a pro UI/UX <br />
                             Designer</p>
                             <div className='row3'>
-                                <span>56366</span>
-                                <span>56366</span>
-                                <span>56366</span>
+                                <span><span> <AiFillEye/> <span className='spanNumber'>24475</span></span></span>
+                                <span><span> < RiThumbUpFill/> <span className='spanNumber'>24475</span></span></span>
+                                <span><span> <FaCommentAlt/> <span className='spanNumber'>24475</span></span></span>
                             </div>
                         </div>
                     </div>
 
                     <div className="Maincolumn2">
-                        
-                            <span> 989890</span> <br />
+                        <div className='Maincol2-inner'>
+                            <span><FaIndianRupeeSign/> 989890</span> 
+
+                           <button> </button>
+                        </div>
                             
                     
                     </div>
                 </div>
             </div>
         </div>
+       </div>
+         
     )
 }
 
