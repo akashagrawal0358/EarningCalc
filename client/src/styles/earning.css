@@ -1,0 +1,107 @@
+/* Your CSS file (e.g., styles.css) */
+
+/* Define styles for the row and columns */
+
+.container-EarnOne{
+  width: 1367px; 
+  height: 359px;
+  top: 76px;
+  left: -1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+.e-row {
+    
+    background-color: #1E1E1E;
+    border-radius: 16px;
+    width: 1079px;
+    height: 266px;
+    top: 46px;
+    left: 145px ;
+    padding: 20px 40px 20px 40px ;
+    gap: 20px
+}
+.e-row-inside{
+  display: flex;
+  width: 955px;
+  height: 226px;
+  gap: 40px;
+  padding: 20px 40px 20px 40px ;
+
+}
+
+/* Style for the image in the first column */
+.column img {
+  max-width: 100%;
+  height: auto;
+}
+.Maincolumn1{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 529px;
+  height: 226px;
+  gap: 11px;
+}
+
+.column1{
+  width: 240px;
+  height: 135px;
+  border-radius: 10px;
+}
+.column2{
+  
+  width: 255px;
+  height: 157px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 11px;
+  
+}
+.column2 p{
+   font-weight: 500;
+}
+.row3{
+  color: rgb(130, 125, 125);
+  font-size: 20px;
+
+  display: flex;
+  flex-direction: column;
+  width: 93px;
+  height: 96px;
+  gap: 12px;
+}
+
+
+.topEarning{
+  width: 172px;
+  height: 32px;
+  border-radius: 4px;
+  padding: 4px 8px 4px 8px;
+  background-color: #707070;
+  gap: 4px;
+  text-align: center;
+}
+ .earn-img{
+  width: 240px;
+  height: 135px;
+  border-radius: 10px
+  
+ } 
+.Maincolumn2{
+  color: white;
+  display: flex;
+  flex-direction: row;
+  width: 529px;
+  height: 226px;
+  gap: 11px;
+  background-color: #282828;
+  border-radius: 16px;
+  align-items: center;
+  justify-content: center;
+  
+}
