@@ -1,9 +1,11 @@
 import React from 'react'
 
-const NavSearchBar = () => {
+
+//  togglepopup received from Navbar 
+const NavSearchBar = ({togglePopup}) => {
   return (
     <div > 
-        <span> Request a call back</span>
+        <button onClick={togglePopup}> Request a call back</button>
     </div>
   )
 }
