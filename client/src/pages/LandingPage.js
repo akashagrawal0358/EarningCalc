@@ -3,36 +3,52 @@ import '../styles/landing.css';
 import { NavLink } from 'react-router-dom';
 import { AiFillPlayCircle } from 'react-icons/ai'
 import Navbar from '../components/Navbar';
-//import axios from 'axios';
-//import('dotenv').config();
+import { useData } from '../context/DataContext';
 
 
 const LandingPage = () => {
 
 
     const [videoLink, setvideoLink] = useState('');
-   
+
+    const { updateData } = useData();
+
     const KEY = 'AIzaSyAJxuDk1X94gl3vBa1_iAgQJx1MciD2gV0';
     const VIDEO_ID = 'BdTIjqL6Fe8';
 
 
+
+    // let views, comments, likes;
+  //  const [youtubeData, setYoutubeData] = useState({ views: 0, likes: 0, comments: 0 });
+
     const API_URL = `https://www.googleapis.com/youtube/v3/videos?id=${VIDEO_ID}&part=statistics&key=${KEY}`;
 
+    console.log("111111");
 
-
-let views ,comments , likes ;
-    fetch(API_URL)
+    useEffect(() => {
+        fetch(API_URL)
             .then(response => {
                 return response.json()
             })
             .then(data => {
-                console.log(data);
-                views = data["items"][0].statistics.viewCount;
-                comments = data["items"][0].statistics.commentCount;
-                likes = data["items"][0].statistics.likeCount;
-                console.log(views, comments, likes);
-            })
+                console.log('Fetched data:', data);
+                const views = data["items"][0].statistics.viewCount;
+                const comments = data["items"][0].statistics.commentCount;
+                const likes = data["items"][0].statistics.likeCount;
 
+                console.log('Views:', views, 'Comments:', comments, 'Likes:', likes);
+
+                // setYoutubeData({ views, likes, comments });
+                 updateData({ views, likes, comments });
+                
+            })
+            .catch(error => {
+                console.error('Error fetching data:', error);
+            });
+
+    }, []);
+
+ 
 
     return (
         <>

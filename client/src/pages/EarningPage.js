@@ -6,9 +6,12 @@ import EarningTwo from '../components/EarningTwo'
 import Navbar from '../components/Navbar'
 import Popup from '../pages/PopUp.js'
 
+
 const EarningPage = () => {
 
     const [isOpen, setIsOpen] = useState(false);
+
+
 
     const togglePopup = () => {
         setIsOpen(!isOpen);
