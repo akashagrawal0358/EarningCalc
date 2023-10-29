@@ -1,7 +1,6 @@
-
 import './App.css';
 import NavSearchBar from './components/NavSearchBar';
-import Navbar from './components/Navbar';
+
 import EarningPage from './pages/EarningPage';
 import LandingPage from './pages/LandingPage';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
