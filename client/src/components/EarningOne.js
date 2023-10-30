@@ -12,10 +12,14 @@ import { useData } from '../context/DataContext'
 const EarningOne = () => {
     const { updateYoutubeData , updateData} = useData();
 
-    useEffect(() => {
-        console.log('Updatedd Data:', updateYoutubeData);
-    }, [updateYoutubeData]);
+    const storedData = JSON.parse(sessionStorage.getItem('youtubeData'));
 
+    useEffect(() => {
+        console.log('Updated Data:', storedData);
+        if (storedData) {
+            updateData(storedData);
+        }
+    }, []);
 
     return (
 

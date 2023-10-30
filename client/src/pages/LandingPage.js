@@ -23,23 +23,29 @@ const LandingPage = () => {
 
     const API_URL = `https://www.googleapis.com/youtube/v3/videos?id=${VIDEO_ID}&part=statistics&key=${KEY}`;
 
-    console.log("111111");
-
+   
     useEffect(() => {
         fetch(API_URL)
             .then(response => {
                 return response.json()
             })
             .then(data => {
-                console.log('Fetched data:', data);
+               // console.log('Fetched data:', data);
+
                 const views = data["items"][0].statistics.viewCount;
                 const comments = data["items"][0].statistics.commentCount;
                 const likes = data["items"][0].statistics.likeCount;
 
-                console.log('Views:', views, 'Comments:', comments, 'Likes:', likes);
+               // console.log('Views:', views, 'Comments:', comments, 'Likes:', likes);
 
                 // setYoutubeData({ views, likes, comments });
+
+                 // Used to update the context data
                  updateData({ views, likes, comments });
+                 
+
+                // Storing fetched data in local Storage, so that on reloading window data not get lost  
+                 sessionStorage.setItem('youtubeData', JSON.stringify({ views, likes, comments })); 
                 
             })
             .catch(error => {
