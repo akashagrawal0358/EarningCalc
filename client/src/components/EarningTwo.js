@@ -1,11 +1,14 @@
 import React from 'react'
+import { useData } from '../context/DataContext'
 
 const EarningTwo = () => {
+
+    const{  updateYoutubeData } = useData();
+
+
   return (
 
     <>
-
-      <span className='Earn-heading'> Other Videos Potentials</span>
 
       {/* <div className='head'>  <span className='Earnheading'> Other Videos Potentials </span></div> */}
       <div className='container'>
@@ -25,9 +28,9 @@ const EarningTwo = () => {
             <div className="column-Table">2</div>
             <div className="column-Table">Video Title Name</div>
             <div className="column-Table"><img className='row-img' src='../Images/rowimg.jpg' alt='no' /></div>
-            <div className="column-Table">55555555</div>
-            <div className="column-Table">5536</div>
-            <div className="column-Table">656467</div>
+            <div className="column-Table">{updateYoutubeData.views}</div>
+            <div className="column-Table">{updateYoutubeData.likes}</div>
+            <div className="column-Table">{updateYoutubeData.comments}</div>
             <div className="column-Table">56564</div>
             <div className="column-Table">53657764</div>
           </div>
