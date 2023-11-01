@@ -11,50 +11,63 @@ const LandingPage = () => {
 
     const [videoLink, setvideoLink] = useState('');
 
+    const regex = /[?&]v=([a-zA-Z0-9_-]+)/;
+    var matchLink = videoLink.match(regex);
+
     const { updateData } = useData();
 
-    const KEY = 'AIzaSyAJxuDk1X94gl3vBa1_iAgQJx1MciD2gV0';
-    const VIDEO_ID = 'BdTIjqL6Fe8';
 
+
+    if (matchLink) {
+        console.log(matchLink[1]);
+        matchLink = matchLink[1]; // Extracted video ID
+    } else {
+        // Handle invalid or unsupported link format
+        console.error('Invalid YouTube video link');
+
+    }
+
+    const KEY = 'AIzaSyAJxuDk1X94gl3vBa1_iAgQJx1MciD2gV0';
+    // const VIDEO_ID = matchLink || 'BdTIjqL6Fe8';
+    let VIDEO_ID = matchLink;
 
 
     // let views, comments, likes;
-  //  const [youtubeData, setYoutubeData] = useState({ views: 0, likes: 0, comments: 0 });
+    //  const [youtubeData, setYoutubeData] = useState({ views: 0, likes: 0, comments: 0 });
 
     const API_URL = `https://www.googleapis.com/youtube/v3/videos?id=${VIDEO_ID}&part=statistics&key=${KEY}`;
 
-   
+
     useEffect(() => {
         fetch(API_URL)
             .then(response => {
                 return response.json()
             })
             .then(data => {
-               // console.log('Fetched data:', data);
+                // console.log('Fetched data:', data);
 
                 const views = data["items"][0].statistics.viewCount;
                 const comments = data["items"][0].statistics.commentCount;
                 const likes = data["items"][0].statistics.likeCount;
 
-               // console.log('Views:', views, 'Comments:', comments, 'Likes:', likes);
+                // console.log('Views:', views, 'Comments:', comments, 'Likes:', likes);
 
                 // setYoutubeData({ views, likes, comments });
 
-                 // Used to update the context data
-                 updateData({ views, likes, comments });
-                 
+                // Used to update the context data
+                updateData({ views, likes, comments });
+
 
                 // Storing fetched data in local Storage, so that on reloading window data not get lost  
-                 sessionStorage.setItem('youtubeData', JSON.stringify({ views, likes, comments })); 
-                
+                sessionStorage.setItem('youtubeData', JSON.stringify({ views, likes, comments }));
+
             })
             .catch(error => {
                 console.error('Error fetching data:', error);
             });
 
-    }, []);
+    }, [videoLink]);
 
- 
 
     return (
         <>
